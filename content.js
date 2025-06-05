@@ -5,7 +5,9 @@ let taskListObserver = null; // Observer for changes in the task list
 
 // Function to calculate task count and update/apply the CSS ::after pseudo-element
 function updateAndApplyStyles() {
-  const targetElement = document.getElementById("titleSection-title");
+  const targetElement = document.querySelector(
+    '[id^="settings-section-title-:r8:"]'
+  );
 
   // If the title element isn't there (e.g., navigated away or UI changed), stop.
   if (!targetElement) {
